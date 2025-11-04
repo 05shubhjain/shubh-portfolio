@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website built with **React.js**, **Framer Motion**, and **modern UI design** principles.
 It showcases my work, projects, skills, and journey as a developer passionate about **AI, ML, and Web Technologies**.
 
-🌐 **Website:** [kunjdesai.tech](https://kunjdesai.tech)
+🌐 **Website:** [kunj-Portfolio](https://6909e26ec3abc94112929323--kunjdesaiportfolio.netlify.app/)
 
 ---
 
