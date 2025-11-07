@@ -10,7 +10,12 @@ import instagramLogo from "../../public/insta.png";
 import facebookLogo from "../../public/facebook.png";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    contact: "",
+    subject: "",
+    message: "",
+  });
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -23,19 +28,20 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_dnhnvhw", // 🔹 replace with EmailJS Service ID
-        "template_7xa1b39", // 🔹 replace with EmailJS Template ID
+        "service_dnhnvhw", // your EmailJS Service ID
+        "template_7xa1b39", // your Template ID
         {
           from_name: form.name,
+          contact_info: form.contact,
           subject: form.subject,
           message: form.message,
         },
-        "UIj6ED3E6LZDwg3Jd" // 🔹 replace with EmailJS Public Key
+        "UIj6ED3E6LZDwg3Jd" // your Public Key
       )
       .then(
         () => {
           setStatus("✅ Message sent successfully!");
-          setForm({ name: "", subject: "", message: "" });
+          setForm({ name: "", contact: "", subject: "", message: "" });
         },
         (error) => {
           console.error("FAILED...", error);
@@ -163,6 +169,15 @@ export default function Contact() {
           name="name"
           placeholder="Your Name"
           value={form.name}
+          onChange={handleChange}
+          required
+          style={inputStyle}
+        />
+        <input
+          type="text"
+          name="contact"
+          placeholder="Your Email or Phone"
+          value={form.contact}
           onChange={handleChange}
           required
           style={inputStyle}
