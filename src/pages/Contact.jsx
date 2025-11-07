@@ -24,19 +24,33 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Basic validation
+    if (!form.name || !form.contact || !form.subject || !form.message) {
+      setStatus("⚠️ Please fill in all fields.");
+      return;
+    }
+
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    const isEmail = emailPattern.test(form.contact);
+    if (!isEmail && isNaN(form.contact)) {
+      setStatus("⚠️ Please enter a valid email or phone number.");
+      return;
+    }
+
     setStatus("Sending...");
 
     emailjs
       .send(
-        "service_dnhnvhw", // your EmailJS Service ID
-        "template_7xa1b39", // your Template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           contact_info: form.contact,
           subject: form.subject,
           message: form.message,
         },
-        "UIj6ED3E6LZDwg3Jd" // your Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -171,6 +185,7 @@ export default function Contact() {
           value={form.name}
           onChange={handleChange}
           required
+          aria-label="Your name"
           style={inputStyle}
         />
         <input
@@ -180,6 +195,7 @@ export default function Contact() {
           value={form.contact}
           onChange={handleChange}
           required
+          aria-label="Your contact info"
           style={inputStyle}
         />
         <input
@@ -189,6 +205,7 @@ export default function Contact() {
           value={form.subject}
           onChange={handleChange}
           required
+          aria-label="Subject"
           style={inputStyle}
         />
         <textarea
@@ -198,6 +215,7 @@ export default function Contact() {
           onChange={handleChange}
           required
           rows="5"
+          aria-label="Your message"
           style={{ ...inputStyle, resize: "none" }}
         />
         <motion.button
@@ -216,7 +234,18 @@ export default function Contact() {
         >
           🚀 Send Message
         </motion.button>
-        {status && <p style={{ marginTop: 10, color: "#0ff" }}>{status}</p>}
+
+        {/* Animated status */}
+        {status && (
+          <motion.p
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{ marginTop: 10, color: "#0ff", fontWeight: 500 }}
+          >
+            {status}
+          </motion.p>
+        )}
       </motion.form>
     </section>
   );
