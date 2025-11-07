@@ -12,6 +12,14 @@ const PROJECTS = [
     code: 'https://github.com/kunjdesai/mammo-detector'
   },
   {
+  title: '🧠 Mental Health Analyzer',
+  desc: 'NLP-based system that analyzes user text to detect signs of anxiety, stress, and depression using sentiment analysis and transformer models.',
+  ss: '/projects/mentalhealth.jpg',
+  tech: ['Python', 'Transformers', 'NLTK', 'scikit-learn'],
+  live: 'https://mental-health-analyzer.streamlit.app/',
+  code: 'https://github.com/kunj2803/Mental-Health-Analyzer'
+  },
+  {
     title: '🤖 Indian Sign Language Interpreter',
     desc: 'Real-time gesture recognition and translation using Mediapipe + TensorFlow, enabling live sign-to-text interpretation.',
     ss: '/ISL.png',
@@ -20,19 +28,27 @@ const PROJECTS = [
     code: 'https://github.com/kunjdesai/ISL-Interpreter'
   },
   {
+  title: '💼 Portfolio Website',
+  desc: 'A modern and responsive portfolio built with React and Framer Motion, showcasing projects, skills, and achievements with smooth animations and interactive UI.',
+  ss: '/projects/portfolio.jpg',
+  tech: ['React', 'Framer Motion', 'Tailwind CSS'],
+  live: '#',
+  code: 'https://github.com/kunj2803/Kunj-Portfolio'
+  },
+  {
     title: '💬 DocuChat – Gemini AI Chatbot',
     desc: 'An intelligent document interaction app powered by Gemini API that understands and answers queries from uploaded PDFs.',
     ss: '/Docuchat.png',
     tech: ['Gemini API', 'LangChain', 'Python', 'Streamlit'],
-    live: '#',
-    code: 'https://github.com/kunjdesai/DocuChat'
+    live: 'https://docuchat-chatbot.streamlit.app/',
+    code: 'https://github.com/kunj2803/Docuchat-Chatbot'
   },
   {
     title: '📊 ProfileX – Data Profiler',
     desc: 'Smart data profiling and preprocessing web app for CSV datasets — feature summary, missing value handling, and visualization.',
     ss: '/ProfileX.png',
     tech: ['Streamlit', 'Pandas', 'Plotly'],
-    live: '#',
+    live: 'https://profilex.streamlit.app/',
     code: 'https://github.com/kunjdesai/ProfileX'
   },
   {
