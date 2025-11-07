@@ -14,7 +14,7 @@ const PROJECTS = [
   {
   title: '🧠 Mental Health Analyzer',
   desc: 'NLP-based system that analyzes user text to detect signs of anxiety, stress, and depression using sentiment analysis and transformer models.',
-  ss: '/projects/mentalhealth.jpg',
+  ss: '/mentalhealth.jpg',
   tech: ['Python', 'Transformers', 'NLTK', 'scikit-learn'],
   live: 'https://mental-health-analyzer.streamlit.app/',
   code: 'https://github.com/kunj2803/Mental-Health-Analyzer'
@@ -30,7 +30,7 @@ const PROJECTS = [
   {
   title: '💼 Portfolio Website',
   desc: 'A modern and responsive portfolio built with React and Framer Motion, showcasing projects, skills, and achievements with smooth animations and interactive UI.',
-  ss: '/projects/portfolio.jpg',
+  ss: '/portfolio.jpg',
   tech: ['React', 'Framer Motion', 'Tailwind CSS'],
   live: '#',
   code: 'https://github.com/kunj2803/Kunj-Portfolio'
@@ -54,7 +54,7 @@ const PROJECTS = [
   {
     title: '🧬 Breast Cancer Prediction',
     desc: 'ML pipeline using SVC, Random Forest, and XGBoost with SMOTE for imbalanced dataset handling and model optimization.',
-    ss: '/projects/breastpred.jpg',
+    ss: '/breastpred.jpg',
     tech: ['scikit-learn', 'XGBoost', 'Pandas'],
     live: '#',
     code: 'https://github.com/kunjdesai/BreastCancerPrediction'
