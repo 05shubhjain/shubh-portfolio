@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // 🖼️ Import Assets
-import photo from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/photo-1.png'
+import photo from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/photo-1.png'
 import githubLogo from '../../public/github.png'
 import linkedinLogo from '../../public/linkedin.png'
 import gmailLogo from '../../public/gmail.png'
