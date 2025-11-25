@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // 🖼️ Import Assets
-import photo from '../../public/photo.jpg'
+import photo from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/photo-1.png'
 import githubLogo from '../../public/github.png'
 import linkedinLogo from '../../public/linkedin.png'
 import gmailLogo from '../../public/gmail.png'
@@ -12,20 +12,22 @@ import facebookLogo from '../../public/facebook.png'
 
 export default function Home() {
   const professions = [
-    'AI Enthusiast',
+    'Aspiring Data Scientist',
     'Machine Learning Engineer',
-    "Deep Learning Expert",
-    'Computer Vision Researcher',
-    'Developer',
-  ]
+    'AI & Deep Learning Enthusiast',
+    'Computer Vision Developer',
+    'Full Stack Web Developer',
+    'Android App Developer',
+    'Data Analyst',
+  ];
+
 
   const quickLinks = [
-    { img: githubLogo, title: 'GitHub', link: 'https://github.com/kunj2803' },
-    { img: linkedinLogo, title: 'LinkedIn', link: 'https://www.linkedin.com/in/kunj-desai-07717b293/' },
-    { img: gmailLogo, title: 'Email', link: 'kunjd2803@gmail.com' },
-    { img: whatsappLogo, title: 'WhatsApp', link: 'https://wa.me/+918758209508' },
-    { img: instagramLogo, title: 'Instagram', link: 'https://www.instagram.com/kunj_2834/' },
-    { img: facebookLogo, title: 'Facebook', link: 'https://www.facebook.com/kunj.desai.222608' },
+    { img: githubLogo, title: 'GitHub', link: 'https://github.com/05shubhjain' },
+    { img: linkedinLogo, title: 'LinkedIn', link: 'https://www.linkedin.com/in/shubh-jain-860071291/' },
+    { img: gmailLogo, title: 'Email', link: 'mailto:jainshubh2206@gmail.com'  },
+    { img: whatsappLogo, title: 'WhatsApp', link: 'https://wa.me/+919329375694' },
+    { img: instagramLogo, title: 'Instagram', link: 'https://www.instagram.com/_shubh_jain05' },
   ]
 
   return (
@@ -116,7 +118,7 @@ export default function Home() {
           >
             <motion.img
               src={photo}
-              alt="Kunj Desai"
+              alt="Shubh Jain"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1 }}
@@ -163,22 +165,26 @@ export default function Home() {
                 backgroundSize: '200%',
               }}
             >
-              Kunj Desai
+              Shubh Jain
             </motion.span>
           </h1>
 
           {/* --- Typing Animated Text --- */}
           <p
-            className="typing-effect"
-            style={{
-              fontSize: '1.2rem',
-              color: 'rgba(255,255,255,0.85)',
-              marginTop: '0.4rem',
-              maxWidth: '95%',
-            }}
+           className="typing-effect"
+           style={{
+           fontSize: 'clamp(0.8rem, 2vw, 1.1rem)',
+           color: 'rgba(255,255,255,0.85)',
+           marginTop: '0.4rem',
+           whiteSpace: 'nowrap',
+           overflowX: 'auto',
+           scrollbarWidth: 'none',
+           }}
           >
-          Aritificial Intellegence Engineer | Frontend Developer | Tech Explorer
-          </p>
+          Machine Learning Engineer | Web & App Developer | Data Science Enthusiast
+        </p>
+
+
 
           {/* --- Profession Tags --- */}
           <motion.div
@@ -228,9 +234,9 @@ export default function Home() {
             }}
           >
             {[ 
-              { label: '📍 Location', value: 'Surat,Gujrat,India' },
+              { label: '📍 Location', value: 'Indore,Madhya Pradesh,India' },
               { label: '💼 Expertise', value: 'AI/ML,Problem solving' },
-              { label: '📧 Contact', value: 'kunjd2803@gmail.com' },
+              { label: '📧 Contact', value: 'jainshubh2206@gmail.com' },
             ].map((info, i) => (
               <motion.div
                 key={i}

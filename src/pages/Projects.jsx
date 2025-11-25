@@ -1,63 +1,110 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
+import darshanImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/darshan setu.png'
+import nepSinImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/nepsin.png'
+import portfolioImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/portfolio.png'
+import powerbiImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/powerbi.webp'
+import analyticsImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/Analytics Report.webp'
+import weatherImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/weather forcast.png'
+import laptopImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/Laptop Price Predictor.png'
+import expenseImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/expense tracker.png'
+import healthImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/health monitor.png'
+import foodImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/food delivery.png'
+import trackingImg from '/Users/shubhjain/Documents/portfolio new/Kunj-Portfolio/dist/assets/tracking.png'
 
 const PROJECTS = [
   {
-    title: '🩺 Mammogram Malignancy Detector',
-    desc: 'Hybrid CNN + YOLOv8 ensemble for full-image breast cancer detection with ROI preprocessing and sliding-window inference.',
-    ss: '/mamo.png',
-    tech: ['TensorFlow', 'Keras', 'OpenCV', 'YOLOv8'],
+    title: '🖥️ Darshan Setu Website', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Website to track real-time crowd density in temples across Gujarat.',
+    ss: darshanImg,
+    tech: ['Typescript', 'HTML', 'CSS', 'JavaScript'],
+    live: 'https://darshan-setu.vercel.app/',
+    code: 'https://github.com/05shubhjain/darshan-setu'
+  },
+  {
+    title: '🧠 Nepali & Sinhala Translator', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Multilingual translator converting Nepali and Sinhala text into English.',
+    ss: nepSinImg,
+    tech: ['Python', 'Typescript', 'HTML', 'CSS', 'JavaScript'],
+    live: 'https://nep-sin.vercel.app/',
+    code: 'https://github.com/05shubhjain/NepSin'
+  },
+  {
+    title: '💼 Portfolio Website', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Dynamic personal website showcasing technical projects, skills, and certifications.',
+    ss: portfolioImg,
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    live: 'https://shubh-s-portfolio.vercel.app/',
+    code: 'https://github.com/05shubhjain/Shubh-s_Portfolio'
+  },
+  {
+    title: '💻 Laptop Price Predictor', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'ML model predicting laptop prices based on specifications and brand.',
+    ss: laptopImg,
+    tech: ['scikit-learn', 'Pandas', 'Pandas'],
     live: '#',
-    code: 'https://github.com/kunjdesai/mammo-detector'
+    code: 'https://github.com/05shubhjain/Laptop-prediction'
   },
   {
-  title: '🧠 Mental Health Analyzer',
-  desc: 'NLP-based system that analyzes user text to detect signs of anxiety, stress, and depression using sentiment analysis and transformer models.',
-  ss: '/mentalhealth.jpg',
-  tech: ['Python', 'Transformers', 'NLTK', 'scikit-learn'],
-  live: 'https://mental-health-analyzer.streamlit.app/',
-  code: 'https://github.com/kunj2803/Mental-Health-Analyzer'
+    title: '⛈️ Weather Forecasting Model', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'AI-powered time-series model for accurate weather predictions.',
+    ss: weatherImg,
+    tech: ['Streamlit', 'Pandas', 'Matplotlib'],
+    live: 'https://weather-forecasting-shubh.vercel.app/',
+    code: 'https://github.com/05shubhjain/Weather-Forecasting'
   },
   {
-    title: '🤖 Indian Sign Language Interpreter',
-    desc: 'Real-time gesture recognition and translation using Mediapipe + TensorFlow, enabling live sign-to-text interpretation.',
-    ss: '/ISL.png',
-    tech: ['Mediapipe', 'TensorFlow', 'React', 'Flask'],
+    title: '📊 Power BI Dashboard', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Developed an interactive Power BI dashboard for business analytics, enabling detailed reports and KPI tracking.',
+    ss: powerbiImg,
+    tech: ['MySQL', 'Power BI', 'Excel'],
     live: '#',
-    code: 'https://github.com/kunjdesai/ISL-Interpreter'
+    code: '#'
   },
   {
-  title: '💼 Portfolio Website',
-  desc: 'A modern and responsive portfolio built with React and Framer Motion, showcasing projects, skills, and achievements with smooth animations and interactive UI.',
-  ss: '/portfolio.jpg',
-  tech: ['React', 'Framer Motion', 'Tailwind CSS'],
-  live: '#',
-  code: 'https://github.com/kunj2803/Kunj-Portfolio'
-  },
-  {
-    title: '💬 DocuChat – Gemini AI Chatbot',
-    desc: 'An intelligent document interaction app powered by Gemini API that understands and answers queries from uploaded PDFs.',
-    ss: '/Docuchat.png',
-    tech: ['Gemini API', 'LangChain', 'Python', 'Streamlit'],
-    live: 'https://docuchat-chatbot.streamlit.app/',
-    code: 'https://github.com/kunj2803/Docuchat-Chatbot'
-  },
-  {
-    title: '📊 ProfileX – Data Profiler',
-    desc: 'Smart data profiling and preprocessing web app for CSV datasets — feature summary, missing value handling, and visualization.',
-    ss: '/ProfileX.png',
-    tech: ['Streamlit', 'Pandas', 'Plotly'],
-    live: 'https://profilex.streamlit.app/',
-    code: 'https://github.com/kunjdesai/ProfileX'
-  },
-  {
-    title: '🧬 Breast Cancer Prediction',
-    desc: 'ML pipeline using SVC, Random Forest, and XGBoost with SMOTE for imbalanced dataset handling and model optimization.',
-    ss: '/breastpred.jpg',
-    tech: ['scikit-learn', 'XGBoost', 'Pandas'],
+    title: '📃 Analytics Report', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Created detailed Power BI reports visualizing sales, performance metrics, and trends.',
+    ss: analyticsImg,
+    tech: ['MySQL', 'Power BI', 'Excel'],
     live: '#',
-    code: 'https://github.com/kunjdesai/BreastCancerPrediction'
+    code: '#'
+  },
+  {
+    title: '📱 Expense Tracker', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Mobile app for managing and analyzing financial expenses with interactive dashboards.',
+    ss: expenseImg,
+    tech: ['Flutter', 'Dart', 'Figma'],
+    live: '#',
+    code: '#',
+    isMobile: true
+  },
+  {
+    title: '🩺 Health Monitoring App', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'App to track vital health parameters and provide personalized wellness insights.',
+    ss: healthImg,
+    tech: ['Flutter', 'Dart', 'Figma'],
+    live: '#',
+    code: '#',
+    isMobile: true
+  },
+  {
+    title: '🍱 Food Delivery App', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Delivers healthy meals and customized nutrition plans straight to your doorstep.',
+    ss: foodImg,
+    tech: ['Flutter', 'Dart', 'FlutterFlow'],
+    live: '#',
+    code: '#',
+    isMobile: true
+  },
+  {
+    title: '🚌 Public Transport App', ///////////////////////////// COMPLETED ////////////////////////////////////
+    desc: 'Real-time GPS-based transit system improving public transportation experience.',
+    ss: trackingImg,
+    tech: ['Flutter', 'Dart', 'FlutterFlow'],
+    live: '#',
+    code: '#',
+    isMobile: true
   }
 ]
 
@@ -70,7 +117,14 @@ export default function Projects() {
       transition={{ duration: 0.6 }}
       id="projects"
     >
-      <div className="card" style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: 30 }}>
+      <div
+        className="card"
+        style={{
+          background: 'rgba(255,255,255,0.03)',
+          borderRadius: 16,
+          padding: 30
+        }}
+      >
         <motion.h2
           className="text-4xl font-semibold text-cyan-400 mb-2"
           initial={{ opacity: 0 }}
@@ -83,7 +137,14 @@ export default function Projects() {
           A collection of my major works — blending research, AI innovation, and modern UI design.
         </p>
 
-        <div className="projects-grid" style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
+        <div
+          className="projects-grid"
+          style={{
+            display: 'grid',
+            gap: 24,
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'
+          }}
+        >
           {PROJECTS.map((p, idx) => (
             <motion.div
               key={idx}
@@ -94,7 +155,8 @@ export default function Projects() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               style={{
-                background: 'linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9))',
+                background:
+                  'linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9))',
                 border: '1px solid rgba(0,255,255,0.1)',
                 borderRadius: 16,
                 padding: 16,
@@ -102,24 +164,53 @@ export default function Projects() {
                 boxShadow: '0 0 20px rgba(0,255,255,0.08)'
               }}
             >
-              <motion.div className="ss" whileHover={{ scale: 1.05 }} style={{ borderRadius: 12, overflow: 'hidden' }}>
+              <motion.div
+                className="ss"
+                whileHover={{ scale: 1.05 }}
+                style={{ borderRadius: 12, overflow: 'hidden' }}
+              >
                 <img
                   src={p.ss}
                   alt={p.title}
                   style={{
                     width: '100%',
-                    height: '200px',
-                    objectFit: 'cover',
-                    borderRadius: 12
+                    height: p.isMobile ? '260px' : '200px',
+                    objectFit: 'contain',          // so portrait images aren't cropped
+                    borderRadius: 12,
+                    backgroundColor: '#050816'     // fills empty space around contain
                   }}
                 />
               </motion.div>
 
               <div style={{ marginTop: 12 }}>
-                <h3 style={{ fontSize: 18, color: '#0ea5e9', marginBottom: 6 }}>{p.title}</h3>
-                <p style={{ fontSize: 14, color: '#bbb', marginBottom: 8, lineHeight: 1.6 }}>{p.desc}</p>
+                <h3
+                  style={{
+                    fontSize: 18,
+                    color: '#0ea5e9',
+                    marginBottom: 6
+                  }}
+                >
+                  {p.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: '#bbb',
+                    marginBottom: 8,
+                    lineHeight: 1.6
+                  }}
+                >
+                  {p.desc}
+                </p>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 10 }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: 6,
+                    marginBottom: 10
+                  }}
+                >
                   {p.tech.map((t) => (
                     <span
                       key={t}
@@ -137,7 +228,13 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    gap: 10
+                  }}
+                >
                   <motion.a
                     href={p.code}
                     target="_blank"
@@ -169,7 +266,8 @@ export default function Projects() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 5,
-                      background: 'linear-gradient(90deg, #06b6d4, #0891b2)',
+                      background:
+                        'linear-gradient(90deg, #06b6d4, #0891b2)',
                       color: '#fff',
                       padding: '6px 12px',
                       borderRadius: 8,

@@ -19,6 +19,21 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.0",
+    "http-server": "^14.1.1",
     "vite": "^5.0.0"
-  }
+  },
+  "description": "Welcome to my personal portfolio website built with **React.js**, **Framer Motion**, and **modern UI design** principles. It showcases my work, projects, skills, and journey as a developer passionate about **AI, ML, and Web Technologies**.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunj2803/Kunj-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kunj2803/Kunj-Portfolio/issues"
+  },
+  "homepage": "https://github.com/kunj2803/Kunj-Portfolio#readme"
 }

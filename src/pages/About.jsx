@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUniversity, FaSchool, FaGraduationCap } from "react-icons/fa";
+import { FaUniversity, FaGraduationCap, FaSchool } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
@@ -17,7 +17,7 @@ const AboutMe = () => {
         padding: "3rem 1rem",
       }}
     >
-      {/* --- About Me + Education Section --- */}
+      {/* --- About Me Section --- */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -26,16 +26,14 @@ const AboutMe = () => {
           width: "100%",
           maxWidth: "1100px",
           textAlign: "left",
-          marginTop: "1rem",
-          lineHeight: 1.8,
           background: "rgba(255,255,255,0.04)",
-          padding: "3rem 3.5rem",
+          padding: "3rem",
           borderRadius: "18px",
           boxShadow: "0 0 25px rgba(0,255,200,0.08)",
           backdropFilter: "blur(10px)",
+          lineHeight: 1.8,
         }}
       >
-        {/* --- Header --- */}
         <h2
           style={{
             fontSize: "1.9rem",
@@ -48,46 +46,55 @@ const AboutMe = () => {
           About Me
         </h2>
 
-        {/* --- Description --- */}
         <p
           style={{
             fontSize: "1.1rem",
+            color: "rgba(255,255,255,0.9)",
+            marginBottom: "1rem",
+          }}
+        >
+          Hi, I’m <strong>Shubh Jain</strong> — a passionate Machine Learning and
+          Artificial Intelligence enthusiast currently pursuing a B.Tech in{" "}
+          <strong>Computer Science Engineering (Data Science)</strong> at{" "}
+          <strong>IPS Academy, Indore</strong>.
+        </p>
+
+        <p
+          style={{
+            fontSize: "1.05rem",
             color: "rgba(255,255,255,0.85)",
             marginBottom: "1rem",
           }}
         >
-          Hi, I’m <strong>Kunj Desai</strong> — an aspiring{" "}
-          <strong>Artificial Intelligence Engineer</strong> and{" "}
-          <strong>Machine Learning enthusiast</strong> who loves turning ideas
-          into intelligent systems. I’m deeply fascinated by how data and
-          algorithms can shape the future of healthcare, automation, and
-          creativity in technology.
+          I love building intelligent systems using Machine Learning, Deep
+          Learning, NLP, and Data Analysis. I enjoy working on AI-powered
+          projects such as predictive models, chatbots, analytics dashboards, and
+          full-stack applications.
         </p>
 
-        <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.8)" }}>
-          Beyond code, I enjoy exploring design, experimenting with motion and
-          interaction, and finding ways to blend{" "}
-          <strong>artistic creativity</strong> with{" "}
-          <strong>technical precision</strong>. My goal is to build solutions
-          that not only perform — but also inspire.
-        </p>
-
-        <p>
-            4th-year B.Tech AI Engineering student with hands-on experience in ML & DL Projects. Proficient in Python, scikitlearn,pytorch,tensorflow and data preprocessing. Seeking internship opportunities to apply skills and contribute to
-            impactful AI solutions.
+        <p
+          style={{
+            fontSize: "1.05rem",
+            color: "rgba(255,255,255,0.85)",
+          }}
+        >
+          I’ve developed 5+ websites, 2 Android apps, participated in multiple
+          hackathons, collaborated in AI research, and led workshops on Machine
+          Learning and Data Visualization. My goal is to contribute to impactful
+          and scalable AI-driven solutions.
         </p>
 
         {/* --- Education Section --- */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
           style={{ marginTop: "3rem" }}
         >
           <h3
             style={{
               fontSize: "1.6rem",
-              marginBottom: "1.5rem",
+              marginBottom: "1.2rem",
               background:
                 "linear-gradient(90deg, var(--accent), var(--accent-2))",
               WebkitBackgroundClip: "text",
@@ -97,14 +104,9 @@ const AboutMe = () => {
             Education
           </h3>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.2rem",
-            }}
-          >
-            {/* --- Education Card 1 --- */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
+            
+            {/* --- B.Tech --- */}
             <motion.div
               whileHover={{
                 scale: 1.02,
@@ -114,9 +116,8 @@ const AboutMe = () => {
               style={{
                 background: "rgba(255,255,255,0.05)",
                 borderRadius: "14px",
-                padding: "1.5rem 2rem",
+                padding: "1.6rem 2rem",
                 border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
                 display: "flex",
                 alignItems: "center",
                 gap: "1.2rem",
@@ -127,29 +128,24 @@ const AboutMe = () => {
                 <h4
                   style={{
                     color: "var(--accent)",
-                    marginBottom: "0.4rem",
+                    marginBottom: "0.3rem",
                     fontSize: "1.25rem",
                   }}
                 >
-                  B.Tech in Artificial Intelligence and Data Science
+                  B.Tech in Computer Science (Data Science)
                 </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>S.C.E.T (Sarvajanik University)</strong> — Surat,
-                  Gujarat
+
+                <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: 4 }}>
+                  <strong>IPS Academy, Indore</strong>
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  4th Year (Pursuing) | GPA: 9.0
+
+                <p style={{ color: "rgba(255,255,255,0.75)" }}>
+                  2023 – 2027 (Present) | CGPA: 8.75 / 10
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>2022 – 2026</p>
               </div>
             </motion.div>
 
-            {/* --- Education Card 2 --- */}
+            {/* --- Class 12 --- */}
             <motion.div
               whileHover={{
                 scale: 1.02,
@@ -159,9 +155,8 @@ const AboutMe = () => {
               style={{
                 background: "rgba(255,255,255,0.05)",
                 borderRadius: "14px",
-                padding: "1.5rem 2rem",
+                padding: "1.6rem 2rem",
                 border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
                 display: "flex",
                 alignItems: "center",
                 gap: "1.2rem",
@@ -172,29 +167,24 @@ const AboutMe = () => {
                 <h4
                   style={{
                     color: "var(--accent)",
-                    marginBottom: "0.4rem",
+                    marginBottom: "0.3rem",
                     fontSize: "1.25rem",
                   }}
                 >
-                  Higher Secondary Education (12th Grade)
+                  Higher Secondary (Class 12)
                 </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>R.S.M. Poonawala Experimental School</strong> — Ambika
-                  Niketan, Surat
+
+                <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: 4 }}>
+                  <strong>Delhi Public School, Gwalior</strong>
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Gujarat Board | Percentage: 78%
+
+                <p style={{ color: "rgba(255,255,255,0.75)" }}>
+                  2022-23 | CBSE Board | 70%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2022</p>
               </div>
             </motion.div>
 
-            {/* --- Education Card 3 --- */}
+            {/* --- Class 10 --- */}
             <motion.div
               whileHover={{
                 scale: 1.02,
@@ -204,9 +194,8 @@ const AboutMe = () => {
               style={{
                 background: "rgba(255,255,255,0.05)",
                 borderRadius: "14px",
-                padding: "1.5rem 2rem",
+                padding: "1.6rem 2rem",
                 border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
                 display: "flex",
                 alignItems: "center",
                 gap: "1.2rem",
@@ -217,27 +206,23 @@ const AboutMe = () => {
                 <h4
                   style={{
                     color: "var(--accent)",
-                    marginBottom: "0.4rem",
+                    marginBottom: "0.3rem",
                     fontSize: "1.25rem",
                   }}
                 >
-                  Secondary Education (10th Grade)
+                  Secondary Education (Class 10)
                 </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>R.S.M. Poonawala Experimental School</strong> — Surat,
-                  Gujarat
+
+                <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: 4 }}>
+                  <strong>Delhi Public School, Gwalior</strong>
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Gujarat Board | Percentage: 69%
+
+                <p style={{ color: "rgba(255,255,255,0.75)" }}>
+                  2020-21 | CBSE Board | 92%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2020</p>
               </div>
             </motion.div>
+
           </div>
         </motion.div>
       </motion.div>

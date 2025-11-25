@@ -1,38 +1,126 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ✅ Certificates data (added URLs for View button)
+/*
+  This version uses images served from public/certs/
+  Make sure your files are in: <project-root>/public/certs/
+  Filenames used below (example): aichatbot.jpg, badtalks.jpg, clash.jpg, clash2.jpg, devtown.jpg, flowathon.jpg,
+  java.png, microsoft.jpg, powerBI.jpg, pythonspoken.png, python.jpg, rdbms.png, sqlbeginner.jpg, sqlhackerrank.jpg, universal.jpg
+*/
+
 const CERTS = {
   tech: [
+    // 2024 certificates first
     {
-      title: "Flipkart Hackathon",
-      org: "Flipkart",
-      date: "2022",
-      img: "/certs/flipkart.jpg",
-      link: "/certs/flipkart.jpg",
+      title: "BAD Talks",
+      org: "BAD Talks",
+      date: "2024",
+      img: "/certs/badtalks.jpg",
+      link: "/certs/badtalks.jpg",
     },
     {
-      title: "Solution Challenge",
-      org: "Google Developers",
-      date: "2023",
-      img: "/certs/hack2skill.png",
-      link: "/certs/hack2skill.png",
+      title: "Clash 1.0 Hackathon",
+      org: "Clash 1.0 Hackathon",
+      date: "2024",
+      img: "/certs/clash.jpg",
+      link: "/certs/clash.jpg",
     },
     {
-      title: "ADira",
-      org: "SCET AI Club",
+      title: "Clash 2.0 Hackathon",
+      org: "Clash 2.0 Hackathon",
+      date: "2024",
+      img: "/certs/clash2.jpg",
+      link: "/certs/clash2.jpg",
+    },
+    {
+      title: "Devtown Bootcamp",
+      org: "Devtown Bootcamp",
+      date: "2024",
+      img: "/certs/devtown.jpg",
+      link: "/certs/devtown.jpg",
+    },
+    {
+      title: "Flowathon Hackathon",
+      org: "Flowathon Hackathon",
+      date: "2024",
+      img: "/certs/flowathon.jpg",
+      link: "/certs/flowathon.jpg",
+    },
+    {
+      title: "Microsoft Azure Explorer",
+      org: "Microsoft Azure Explorer",
+      date: "2024",
+      img: "/certs/microsoft.jpg",
+      link: "/certs/microsoft.jpg",
+    },
+    {
+      title: "PowerBI Data Analyst",
+      org: "PowerBI",
+      date: "2024",
+      img: "/certs/powerBI.jpg",
+      link: "/certs/powerBI.jpg",
+    },
+    {
+      title: "Python Scaler",
+      org: "Python Scaler",
+      date: "2024",
+      img: "/certs/python.jpg",
+      link: "/certs/python.jpg",
+    },
+
+    // 2025 certificates (after 2024)
+    {
+      title: "AI Chatbot Development",
+      org: "AI Chatbot Development",
       date: "2025",
-      img: "/certs/adira.png",
-      link: "/certs/adira.png",
+      img: "/certs/aichatbot.jpg",
+      link: "/certs/aichatbot.jpg",
+    },
+    {
+      title: "Spoken Tutorial Java",
+      org: "Spoken Tutorial Java",
+      date: "2025",
+      img: "/certs/java.png",
+      link: "/certs/java.png",
+    },
+    {
+      title: "Spoken Tutorial RDBMS",
+      org: "Spoken Tutorial RDBMS",
+      date: "2025",
+      img: "/certs/rdbms.png",
+      link: "/certs/rdbms.png",
     },
   ],
+
   other: [
     {
-      title: "Advanced Python",
-      org: "Udemy",
-      date: "2021",
-      img: "/certs/cert3.svg",
-      link: "/certs/cert3.svg",
+      title: "SQL Beginner",
+      org: "SQL Beginner",
+      date: "2024",
+      img: "/certs/sqlbegninner.jpg",
+      link: "/certs/sqlbegninner.jpg",
+    },
+    {
+      title: "SQL Hackerrank",
+      org: "SQL Hackerrank",
+      date: "2024",
+      img: "/certs/sqlhackerrank.jpg",
+      link: "/certs/sqlhackerrank.jpg",
+    },
+    {
+      title: "Universal (C/C++)",
+      org: "C,C++ Language",
+      date: "2024",
+      img: "/certs/universal.jpg",
+      link: "/certs/universal.jpg",
+    },
+    // optional duplicate in other
+    {
+      title: "Clash 1.0 Hackathon (other)",
+      org: "Clash 1.0 Hackathon",
+      date: "2024",
+      img: "/certs/clash.jpg",
+      link: "/certs/clash.jpg",
     },
   ],
 };
@@ -85,12 +173,12 @@ export default function Certificates() {
           <AnimatePresence mode="wait">
             {CERTS[tab].map((c, idx) => (
               <motion.div
-                key={c.title}
+                key={c.title + idx}
                 className="cert card"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                transition={{ duration: 0.4, delay: idx * 0.06 }}
                 whileHover={{
                   scale: 1.03,
                   boxShadow: "0 0 15px rgba(0, 123, 255, 0.4)",
@@ -111,6 +199,7 @@ export default function Certificates() {
                     borderRadius: 10,
                     objectFit: "cover",
                     marginBottom: 12,
+                    background: "#0c0c0c",
                   }}
                 />
                 <strong style={{ fontSize: 16 }}>{c.title}</strong>

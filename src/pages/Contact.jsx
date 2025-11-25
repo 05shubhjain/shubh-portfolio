@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+// emailjs removed (replaced with Web3Forms fetch)
 
+// keep the same image imports and sizes/animations
 import githubLogo from "../../public/github.png";
 import linkedinLogo from "../../public/linkedin.png";
 import gmailLogo from "../../public/gmail.png";
@@ -22,10 +23,10 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
+    // Basic validation (kept same)
     if (!form.name || !form.contact || !form.subject || !form.message) {
       setStatus("⚠️ Please fill in all fields.");
       return;
@@ -40,41 +41,52 @@ export default function Contact() {
 
     setStatus("Sending...");
 
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          contact_info: form.contact,
-          subject: form.subject,
-          message: form.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setStatus("✅ Message sent successfully!");
-          setForm({ name: "", contact: "", subject: "", message: "" });
-        },
-        (error) => {
-          console.error("FAILED...", error);
-          setStatus("❌ Failed to send. Try again later.");
-        }
-      );
+    try {
+      // Web3Forms expects a FormData with access_key
+      const fd = new FormData();
+      // <-- replace this access key if you want to use a different one -->
+      fd.append("access_key", "789efc15-c13b-4027-9ef2-8fa56fcbcf31");
+
+      // Append form fields (use same names)
+      fd.append("name", form.name);
+      // Web3Forms uses "email" as the email field — send contact as email or phone
+      fd.append("email", form.contact);
+      fd.append("subject", form.subject);
+      fd.append("message", form.message);
+
+      // optional metadata (kept minimal)
+      fd.append("source", "Portfolio Contact Form");
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("✅ Message sent successfully!");
+        setForm({ name: "", contact: "", subject: "", message: "" });
+      } else {
+        console.error("Web3Forms response error:", result);
+        setStatus("❌ Failed to send. Try again later.");
+      }
+    } catch (err) {
+      console.error("Submit error:", err);
+      setStatus("❌ Failed to send. Try again later.");
+    }
   };
 
   const quickLinks = [
-    { img: githubLogo, title: "GitHub", link: "https://github.com/kunj2803" },
+    { img: githubLogo, title: "GitHub", link: "https://github.com/05shubhjain" },
     {
       img: linkedinLogo,
       title: "LinkedIn",
-      link: "https://www.linkedin.com/in/kunj-desai-07717b293/",
+      link: "https://www.linkedin.com/in/shubh-jain-860071291/",
     },
-    { img: gmailLogo, title: "Email", link: "mailto:kunjd2803@gmail.com" },
-    { img: whatsappLogo, title: "WhatsApp", link: "https://wa.me/+918758209508" },
-    { img: instagramLogo, title: "Instagram", link: "https://www.instagram.com/kunj_2834/" },
-    { img: facebookLogo, title: "Facebook", link: "https://www.facebook.com/kunj.desai.222608" },
+    { img: gmailLogo, title: "Email", link: "mailto:jainshubh2206@gmail.com" },
+    { img: whatsappLogo, title: "WhatsApp", link: "https://wa.me/+919329375694" },
+    { img: instagramLogo, title: "Instagram", link: "https://www.instagram.com/_shubh_jain05" },
   ];
 
   return (

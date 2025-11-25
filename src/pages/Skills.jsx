@@ -17,14 +17,18 @@ const SKILLS = [
   { name: "TensorFlow", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
   { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
   { name: "OpenCV", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" },
+  { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "Android Studio", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" }, 
+  { name: "Power BI", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" }, 
+  { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
 ];
 
 const ROWS = [
   [
-    { title: "Programming Languages", items: ["Python", "C", "C++", "Java"] },
+    { title: "Programming Languages", items: ["Python", "C", "C++", "Java","Flutter"] },
     { title: "Web Technologies", items: ["HTML", "CSS", "JavaScript", "React"] },
     { title: "Databases & Tools", items: ["MySQL", "MongoDB", "Git"] },
-    { title: "Frameworks & Libraries", items: ["TensorFlow", "PyTorch", "OpenCV"] },
+    { title: "Frameworks & Libraries", items: ["TensorFlow", "PyTorch", "OpenCV","pandas","Numpy","Matplotlib"] },
   ],
   [
     {
